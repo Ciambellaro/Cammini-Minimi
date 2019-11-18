@@ -59,16 +59,18 @@ public class QuizUnoController implements Initializable {
         RadioButton radio = (RadioButton) quiz_1.getSelectedToggle();
         System.out.println(radio.getText() + " ID: " + radio.getId());
         String msg = "";
-        if (radio.getId().equals("opz_1")) {
+        String selected = " ";
+        selected = radio.getId();
+        if (selected.equals("opz_1")) {
             msg += "Risposta errata !";
-        } else if (radio.getId().equals("opz2")) {
+        } else if (selected.equals("opz_2")) {
             msg += "Risposta corretta !";
-        } else if (radio.getId().equals("opz3")) {
+        } else if (selected.equals("opz_3")) {
             msg += "Risposta errata !";
-        } else if (radio.getId() == null) {
+        } else if (selected.equals(" ")) {
             msg += "Devi selezionare la risposta giusta per procedere";
         }
-
+           messaggio.setText(msg);
     }
 
     /**
