@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
@@ -25,6 +26,21 @@ import javafx.stage.Stage;
  * @author Francesco
  */
 public class QuizUnoController implements Initializable {
+
+    @FXML
+    private ToggleGroup quiz_1;
+
+    @FXML
+    private Label messaggio;
+
+    @FXML
+    private RadioButton opz_1;
+
+    @FXML
+    private RadioButton opz_2;
+
+    @FXML
+    private RadioButton opz_3;
 
     //metodo che cambia la scene quando il bottone viene premuto
     public void backLezioneUno(ActionEvent event) throws IOException {
@@ -37,25 +53,22 @@ public class QuizUnoController implements Initializable {
         window.show();
     }
 
-    RadioButton opz1, opz2, opz3;
-    ToggleGroup quiz_1 = new ToggleGroup();
+    @FXML
+    void radioSelect(ActionEvent event) {
 
-    public void radioSelect(ActionEvent event) {
+        RadioButton radio = (RadioButton) quiz_1.getSelectedToggle();
+        System.out.println(radio.getText() + " ID: " + radio.getId());
         String msg = "";
-        if (opz1.isSelected()) {
-            msg += opz1.getText() + "\n";
-            System.out.println(msg);
+        if (radio.getId().equals("opz_1")) {
+            msg += "Risposta errata !";
+        } else if (radio.getId().equals("opz2")) {
+            msg += "Risposta corretta !";
+        } else if (radio.getId().equals("opz3")) {
+            msg += "Risposta errata !";
+        } else if (radio.getId() == null) {
+            msg += "Devi selezionare la risposta giusta per procedere";
         }
 
-        if (opz2.isSelected()) {
-            msg += opz2.getText() + "\n";
-            System.out.println(msg);
-        }
-
-        if (opz3.isSelected()) {
-            msg += opz3.getText() + "\n";
-            System.out.println(msg);
-        }
     }
 
     /**
