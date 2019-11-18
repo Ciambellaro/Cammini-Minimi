@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -42,6 +43,12 @@ public class QuizUnoController implements Initializable {
     @FXML
     private RadioButton opz_3;
 
+    @FXML
+    private Button btnConfirm;
+
+    @FXML
+    private Button btnNext1;
+
     //metodo che cambia la scene quando il bottone viene premuto
     public void backLezioneUno(ActionEvent event) throws IOException {
         Parent intro = FXMLLoader.load(getClass().getResource("lezioneUno.fxml"));
@@ -55,7 +62,6 @@ public class QuizUnoController implements Initializable {
 
     @FXML
     void radioSelect(ActionEvent event) {
-
         RadioButton radio = (RadioButton) quiz_1.getSelectedToggle();
         System.out.println(radio.getText() + " ID: " + radio.getId());
         String msg = "";
@@ -65,12 +71,18 @@ public class QuizUnoController implements Initializable {
             msg += "Risposta errata !";
         } else if (selected.equals("opz_2")) {
             msg += "Risposta corretta !";
+            btnNext1.setDisable(false);
         } else if (selected.equals("opz_3")) {
             msg += "Risposta errata !";
         } else if (selected.equals(" ")) {
             msg += "Devi selezionare la risposta giusta per procedere";
         }
-           messaggio.setText(msg);
+        messaggio.setText(msg);
+    }
+
+    @FXML
+    void radioHasChanged(ActionEvent event) {
+        btnConfirm.setDisable(false);
     }
 
     /**

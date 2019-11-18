@@ -21,7 +21,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="669.0" layoutY="458.0" mnemonicParsing="false" text="Avanti" />
+            <Button fx:id="btnNext1" disable="true" layoutX="669.0" layoutY="458.0" mnemonicParsing="false" text="Avanti" />
             <AnchorPane layoutX="16.0" layoutY="100.0" prefHeight="343.0" prefWidth="704.0">
                <children>
                   <Label layoutX="69.0" layoutY="19.0" text="Tra le tre categorie di problemi elencate precedentemente, a quale appartiene il problema &#10;dei Cammini Minimi ?">
@@ -29,7 +29,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <RadioButton fx:id="opz_1" layoutX="273.0" layoutY="93.0" mnemonicParsing="false" text="Problemi decisionali">
+                  <RadioButton fx:id="opz_1" layoutX="273.0" layoutY="93.0" mnemonicParsing="false" onAction="#radioHasChanged" text="Problemi decisionali">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -37,17 +37,17 @@
                         <ToggleGroup fx:id="quiz_1" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="opz_2" layoutX="273.0" layoutY="132.0" mnemonicParsing="false" text="Problemi di ottimizzazione" toggleGroup="$quiz_1">
+                  <RadioButton fx:id="opz_2" layoutX="273.0" layoutY="132.0" mnemonicParsing="false" onAction="#radioHasChanged" text="Problemi di ottimizzazione" toggleGroup="$quiz_1">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="opz_3" layoutX="273.0" layoutY="175.0" mnemonicParsing="false" text="Problemi di ricerca" toggleGroup="$quiz_1">
+                  <RadioButton fx:id="opz_3" layoutX="273.0" layoutY="175.0" mnemonicParsing="false" onAction="#radioHasChanged" text="Problemi di ricerca" toggleGroup="$quiz_1">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </RadioButton>
-                  <Button layoutX="292.0" layoutY="278.0" mnemonicParsing="false" onAction="#radioSelect" text="Conferma risposta" />
+                  <Button fx:id="btnConfirm" disable="true" layoutX="292.0" layoutY="278.0" mnemonicParsing="false" onAction="#radioSelect" text="Conferma risposta" />
                   <Label fx:id="messaggio" layoutX="209.0" layoutY="208.0" prefHeight="50.0" prefWidth="289.0" />
                </children>
             </AnchorPane>
