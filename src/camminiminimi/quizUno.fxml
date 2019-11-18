@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="camminiminimi.QuizUnoController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="740.0">
+         <children>
+            <Label layoutX="298.0" layoutY="14.0" text="Quiz lezione 1">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#backLezioneUno" text="Indietro">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="591.0" layoutY="461.0" mnemonicParsing="false" text="btn next ancora vuoto" />
+            <AnchorPane layoutX="16.0" layoutY="100.0" prefHeight="343.0" prefWidth="704.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" text="Tra le tre categorie di problemi elencate precedentemente, a quale appartiene il problema &#10;dei Cammini Minimi ?" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="opz_1" layoutX="273.0" layoutY="93.0" mnemonicParsing="false" text="Problemi decisionali">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="quiz_1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="opz_2" layoutX="273.0" layoutY="132.0" mnemonicParsing="false" text="Problemi di ottimizzazione" toggleGroup="$quiz_1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="opz_3" layoutX="273.0" layoutY="175.0" mnemonicParsing="false" text="Problemi di ricerca" toggleGroup="$quiz_1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Button layoutX="292.0" layoutY="277.0" mnemonicParsing="false" text="Conferma risposta" />
+                  <Label layoutX="335.0" layoutY="230.0" text="Label" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

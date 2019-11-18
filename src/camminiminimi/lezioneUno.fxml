@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="camminiminimi.LezioneUnoController">
+              <children>
+              <Label fx:id="label1" layoutX="302.0" layoutY="14.0" minHeight="16" minWidth="69" text="Lezione Uno">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font></Label>
+      <Button layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#backScene" text="Indietro">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="615.0" layoutY="461.0" mnemonicParsing="false" onAction="#nextDue" prefHeight="25.0" prefWidth="111.0" text="Vai al quiz" />
+      <Pane layoutX="16.0" layoutY="51.0" prefHeight="398.0" prefWidth="709.0">
+         <children>
+            <ScrollBar layoutX="683.0" layoutY="14.0" orientation="VERTICAL" prefHeight="376.0" prefWidth="14.0" />
+            <Label layoutX="14.0" layoutY="14.0" text="Classificazione del problema: è necessario classificare i problemi in modo tale da intraprendere &#10;fin da subito la strada giusta per trovare la soluzione ad essi.">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="96.0" text="Problemi decisionali:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="96.0" text="la cui risposta è &quot;si&quot; o &quot;no&quot; (vero o falso) a seconda che il dato  d'ingresso &#10;soddisfi o no una proprietà." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="199.0" text="Problemi di ricerca:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="199.0" text="tra tutte le possibili soluzioni si vuole trovarne una, detta soluzione &#10;ammissibile, che soddisfi una certa condizione." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="284.0" text="Problemi di ottimizzazione:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="216.0" layoutY="284.0" text="nei quali alle soluzioni ammissibili è associata una misura&#10;(o costo, o obiettivo) e si vuole trovare una soluzione ottima, &#10;cioè una soluzione ammissibile la cui misura sia minima o &#10;massima. " wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+              </children>
+</AnchorPane>
